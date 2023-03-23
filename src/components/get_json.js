@@ -7,11 +7,11 @@ async function get_results(query, category, sort, index) {
     let url = "https://www.googleapis.com/books/v1/volumes?q=";
     if (category === 'all') {
         url = "https://www.googleapis.com/books/v1/volumes?q=" + query + 
-        "&orderBy=" + sort + "&maxResults=30&startIndex=" + index + "&key=AIzaSyBlkvr4Y_w97xULxc1F-U-kPyaeUyHgMsU";
+        "&orderBy=" + sort + "&maxResults=30&startIndex=" + index + "&key=" + process.env.REACT_APP_API_KEY;
     }
     else {
         url = "https://www.googleapis.com/books/v1/volumes?q=" + query + "+subject:" + category + 
-        "&orderBy=" + sort + "&maxResults=30&startIndex=" + index + "&key=AIzaSyBlkvr4Y_w97xULxc1F-U-kPyaeUyHgMsU";
+        "&orderBy=" + sort + "&maxResults=30&startIndex=" + index + "&key=" + process.env.REACT_APP_API_KEY;
     }
     let result = await fetch(url).catch(error => notification("Вероятно, соединение прервано"));
 

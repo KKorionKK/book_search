@@ -3,11 +3,39 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
+
+const defaultState = {
+  books: [],
+  prev_query: [],
+}
+
+const reducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case "LOAD_BOOKS":
+      return {...state, books: [...state.books, ...action.payload]}
+    case "GET_BOOKS":
+      return{...state, books: action.payload}
+    case "SET_PREV_QUERY":
+      return {...state, prev_query: action.payload}
+
+    default:
+      return state;
+  }
+}
+const store = configureStore({reducer});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store = {store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

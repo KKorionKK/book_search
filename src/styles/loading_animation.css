@@ -1,0 +1,14 @@
+.ldng {
+    margin: 10px;
+    border: 5px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 5px solid #fe7161;
+    width: 20px;
+    height: 20px;
+    animation: spinner 4s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

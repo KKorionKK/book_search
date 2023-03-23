@@ -1,0 +1,39 @@
+.bookImage {
+  max-width: 200px;
+  max-height: 500px;
+  border-radius: 1ex;
+  min-width: 100px;
+  min-height: 200px;
+}
+  
+.cardLink {
+  text-decoration: none;
+  color: white;
+  appearance: none;
+}
+.cardLink > div > p {
+  font-weight: 700;
+  font-size: medium;
+}
+
+.card {
+  position: relative;
+  margin: 4ex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 1ex;
+  height: 360px;
+}
+.card:hover {
+  background-color: #294b5b;
+}
+
+.cardLink > div > span {
+  font-size: small;
+}
+
+.cardLink > * {
+  font-family: 'Courier New', Courier, monospace;
+}

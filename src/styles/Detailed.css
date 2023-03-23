@@ -1,0 +1,23 @@
+.detailedPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailedInfo {
+    margin: 5ex;
+    display: flex;
+    flex-direction: row;
+}
+
+.detailedImg {
+    width: max-content;
+    height: max-content;
+}
+
+.detailedInfo > div {
+    margin-left: 10ex;
+    font-family: 'Courier New', Courier, monospace;
+}
+.detailedInfo > div > h3 {
+    font-weight: 700;
+}

@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #23404d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  font-size: medium;
+  background-color: #fe7161;
+  border: none;
+  border-radius: 2ex;
+  padding: 1ex;
+  padding-right: 4ex;
+  padding-left: 4ex;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+.frm {
+  background-color: white;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  float:inline-start;
+  align-items: center;
+  padding: 3ex;
+  border-radius: 2ex;
+  color: black;
+}
+.frm > * {
+  margin: 1ex;
+}
+
+.frm > input {
+  height: fit-content;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-p {
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+select {
+  box-sizing: border-box;
+  appearance: none;
+  border: none;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.qry {
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.loadMore {
+  margin-bottom: 20px;
+}
+
+.notifier {
+  width: 100%;
+  padding: 15px;
+  background-color: #fe7161;
+  color: #23404d;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
